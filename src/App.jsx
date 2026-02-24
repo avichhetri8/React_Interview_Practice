@@ -5,6 +5,8 @@ import Counter from './components/Counter'
 import { useState } from 'react';
 import SearchBox from './components/SearchBox';
 import UserList from './components/UserList';
+import CounterRed from './components/CounterRed';
+import CounterWithHooks from './components/CounterWithHooks';
 
 function App() {
   const [query, setQuery] = useState("");
@@ -20,9 +22,11 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-          <Counter /> 
+          <Counter /> <CounterRed />
           <SearchBox onSearch={setQuery}/>
           <UserList search={query} />
+
+          <CounterWithHooks />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
